@@ -1,17 +1,6 @@
 sql_code = """
 -- Proyecto: Base de datos para una plataforma musical
--- SGBD: MySQL 8.0+
--- Orden de ejecución: ejecutar el archivo completo desde MySQL Workbench.
--- Nota de diseño: el diagrama no muestra una clave primaria para GRUPO ni REGISTRADO.
--- Se utiliza nombre como PK de grupo (aparece subrayado en el diagrama) y se agrega
--- id_registrado como PK técnica para identificar de forma única cada registro.
 -- Se interpretan las relaciones N:M como tablas asociativas.
-
-CREATE DATABASE IF NOT EXISTS plataforma_musical
-  CHARACTER SET utf8mb4
-  COLLATE utf8mb4_0900_ai_ci;
-
-USE plataforma_musical;
 
 -- 1. Entidad GRUPO: se crea primero porque ALBUM depende de ella.
 CREATE TABLE grupo (
